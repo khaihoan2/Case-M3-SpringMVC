@@ -1,9 +1,9 @@
 package com.chinhpc.repository;
 
-import com.chinhpc.model.Brand;
+import com.chinhpc.model.User;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IBrandRepository extends PagingAndSortingRepository<Brand, Long> {
+public interface UserRepository extends PagingAndSortingRepository<User, Long> {
 }
