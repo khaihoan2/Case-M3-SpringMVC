@@ -1,0 +1,44 @@
+plugins {
+    id 'war'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    // Servlet
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    // Spring MVC
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.3.10'
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.10'
+    implementation group: 'org.springframework', name: 'spring-beans', version: '5.3.10'
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.3.10'
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.10'
+    // Thymeleaf
+    implementation group: 'org.thymeleaf', name: 'thymeleaf-spring5', version: '3.0.11.RELEASE'
+    // Thymeleaf Layout
+    implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.5.2'
+    // File uploading
+    implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
+    // Hibernate Core
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.3.0.Final'
+    // Hibernate Entity Manager
+    implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.3.0.Final'
+    // Javax Persistence API
+    implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.5.5'
+    // MySQL Connector
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
+    // Validation
+    implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.10.Final'
+}
+
+test {
+    useJUnitPlatform()
+}
